@@ -1,0 +1,19 @@
+.para {
+	background-color: #FFA7A7;
+	color: black;
+	font-family: Verdana, "DejaVu Sans", with sans-serif
+}
+#num2{
+	color: #0000FF;
+	font-size: 36px;
+}
+
+.para-big{
+	font-size: 24px;
+}
+
+#num4{
+	background-color: #77FF77;
+	font-size: 24px;
+	font-weight: bold;
+}
