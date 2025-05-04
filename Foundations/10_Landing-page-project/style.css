@@ -73,3 +73,12 @@ body {
 		display: block;
 	}
 }
+
+.quote {
+	background-color: #E5E7EB;
+	color: #1F2937;
+	font-size: 36px;
+	font-weight: 300;
+	font-style: oblique;
+
+}
