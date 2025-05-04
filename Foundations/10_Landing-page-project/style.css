@@ -1,0 +1,18 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 48px;
+	height: 48px;
+	background-color: #1F2937;
+	ul {
+		display: flex;
+		list-style-type: none;
+		gap: 16px
+	}
+	a {
+		text-decoration: none;
+		color: gray;
+	}
+}
+
+
