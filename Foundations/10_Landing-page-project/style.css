@@ -10,8 +10,12 @@ body {
 .ad {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
+.section{
+	padding: 64px;
+}
 .header,
 .footer {
 	padding: 8px 48px;
