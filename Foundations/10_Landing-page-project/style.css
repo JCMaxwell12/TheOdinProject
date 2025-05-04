@@ -35,3 +35,37 @@ body {
 	justify-content: center;
 }
 
+
+.description {
+	display: flex;
+	flex-direction: column;
+	margin-right: 48px;
+	gap: 12px;
+	button {
+		padding: 4px;
+		width: 64px;
+		display: block;
+	}
+}
+
+.descr {
+	background-color: #1F2937;
+
+.info {
+	flex-direction: column;
+	.cards {
+		display: flex;
+		gap: 24px;
+	}
+}
+
+.card {
+	justify-content: center;
+	text-align: center;
+	img {
+		width: 100px;
+		height: 100px;
+		border: 3px solid #000;
+		display: block;
+	}
+}
