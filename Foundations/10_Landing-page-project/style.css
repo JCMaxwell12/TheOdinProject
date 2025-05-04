@@ -6,7 +6,8 @@ body {
 
 .header,
 .section,
-.footer {
+.footer,
+.ad {
 	display: flex;
 	align-items: center;
 }
@@ -81,4 +82,22 @@ body {
 	font-weight: 300;
 	font-style: oblique;
 
+}
+
+.ad {
+	border-radius: 10px;
+	gap: 32px;
+	padding: 48px;
+	margin: 16px;
+	background-color: #3882F6;
+	color: #F9FAF8;
+	#para {
+		color: #E5E7EB
+	}
+	button {
+		background-color: #3882F6;
+		color: #F9FAF8;
+		border-radius: 4px;
+		border-color: #F9FAF8;
+	}
 }
