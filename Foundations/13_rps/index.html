@@ -59,12 +59,10 @@
 		let humanScore = 0;
 		let computerScore = 0;
 
-		if (humanScore > computerScore) {
-			console.log('Human wins')
-		} else if (humanScore < computerScore) {
-			console.log('Computer wins')
-		} else {
-			console.log('It\'s a tie')
+		if (humanScore >= 5) {
+			alert('Human wins')
+		} else if (computerScore >= 5) {
+			alert('Computer wins')
 		}
 
 
