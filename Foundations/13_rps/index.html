@@ -3,6 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
+	<script>
+		let humanScore = 0;
+		let computerScore = 0;
+	</script>
 </head>
 
 <body>
@@ -55,6 +59,11 @@
 				console.log('Round tie')
 			}
 			console.log(`computer: ${computerC};	human: ${humanC}\n\n`)
+			if (humanScore >= 5) {
+				alert('Human wins');
+			} else if (computerScore >= 5) {
+				alert('Computer wins');
+			};
 		}
 
 		const buttons = document.querySelector(".buttons");
@@ -72,17 +81,6 @@
 					break;
 			}
 		});
-
-
-		let humanScore = 0;
-		let computerScore = 0;
-
-		if (humanScore >= 5) {
-			alert('Human wins')
-		} else if (computerScore >= 5) {
-			alert('Computer wins')
-		}
-
 
 	</script>
 </body>
