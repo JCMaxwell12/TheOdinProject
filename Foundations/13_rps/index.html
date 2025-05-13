@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 </head>
+
 <body>
 	<script>
 		function getComputerChoice() {
 			cC = Math.random();
-			if (cC < (1/3)){
+			if (cC < (1 / 3)) {
 				return 'r'
 
-			} else if (cC < 2/3){
+			} else if (cC < 2 / 3) {
 				return 'p'
 
-			} else  {
+			} else {
 				return 's'
 			}
 		}
@@ -21,13 +23,13 @@
 		function getHumanChoice() {
 			hC = prompt('Rock/Paper/Scissors')
 			hC = hC.toLowerCase()
-			if (hC == 'rock'){
+			if (hC == 'rock') {
 				return 'r'
 
-			} else if (hC == 'paper'){
+			} else if (hC == 'paper') {
 				return 'p'
 
-			} else if (hC == 'scissors'){
+			} else if (hC == 'scissors') {
 				return 's'
 			}
 		}
@@ -38,13 +40,13 @@
 
 			if ((h == 'r' && c == 'p') ||
 				(h == 'p' && c == 's') ||
-				(h == 's' && c == 'r')){
+				(h == 's' && c == 'r')) {
 				computerScore++;
 				console.log('Computer scores')
 
 			} else if ((c == 'r' && h == 'p') ||
 				(c == 'p' && h == 's') ||
-				(c == 's' && h == 'r')){
+				(c == 's' && h == 'r')) {
 				humanScore++;
 				console.log('Human scores')
 			} else {
@@ -53,17 +55,13 @@
 			console.log(`computer: ${c};	human: ${h}\n\n`)
 		}
 
-		
+
 		let humanScore = 0;
 		let computerScore = 0;
 
-		for (let i = 0; i < 5; i++) {
-			playRound();
-		}
-
 		if (humanScore > computerScore) {
 			console.log('Human wins')
-		} else if (humanScore < computerScore){
+		} else if (humanScore < computerScore) {
 			console.log('Computer wins')
 		} else {
 			console.log('It\'s a tie')
@@ -72,4 +70,5 @@
 
 	</script>
 </body>
+
 </html>
