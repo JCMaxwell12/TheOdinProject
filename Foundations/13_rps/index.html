@@ -15,6 +15,13 @@
 		<button id="paperBtn">Paper</button>
 		<button id="scissorsBtn">Scissors</button>
 	</div>
+	<div>
+		<p id=cPara>Computer score: 0</p>
+		<p id=hPara>Human score: 0</p>
+		<br>
+		<p id=rResult>Game starts!</p>
+
+	</div>
 	<script>
 		function getComputerChoice() {
 			cC = Math.random();
@@ -44,21 +51,29 @@
 		}
 
 		function playRound(computerC, humanC) {
+			rResult = document.querySelector('#rResult')
 			if ((humanC == 'r' && computerC == 'p') ||
 				(humanC == 'p' && computerC == 's') ||
 				(humanC == 's' && computerC == 'r')) {
 				computerScore++;
-				console.log('Computer scores')
+
+				computerPara = document.querySelector('#cPara');
+				computerPara.textContent = `Computer score = ${computerScore}`
+				rResult.textContent = 'Computer scores';
 
 			} else if ((computerC == 'r' && humanC == 'p') ||
 				(computerC == 'p' && humanC == 's') ||
 				(computerC == 's' && humanC == 'r')) {
 				humanScore++;
-				console.log('Human scores')
+
+				humanPara = document.querySelector('#hPara');
+				humanPara.textContent = `Human score = ${humanScore}`
+				rResult.textContent = 'Human scores';
+
 			} else {
-				console.log('Round tie')
+				rResult.textContent = 'Round tie';
 			}
-			console.log(`computer: ${computerC};	human: ${humanC}\n\n`)
+
 			if (humanScore >= 5) {
 				alert('Human wins');
 			} else if (computerScore >= 5) {
