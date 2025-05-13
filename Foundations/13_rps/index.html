@@ -39,25 +39,22 @@
 			}
 		}
 
-		function playRound() {
-			c = getComputerChoice()
-			h = getHumanChoice()
-
-			if ((h == 'r' && c == 'p') ||
-				(h == 'p' && c == 's') ||
-				(h == 's' && c == 'r')) {
+		function playRound(computerC, humanC) {
+			if ((humanC == 'r' && computerC == 'p') ||
+				(humanC == 'p' && computerC == 's') ||
+				(humanC == 's' && computerC == 'r')) {
 				computerScore++;
 				console.log('Computer scores')
 
-			} else if ((c == 'r' && h == 'p') ||
-				(c == 'p' && h == 's') ||
-				(c == 's' && h == 'r')) {
+			} else if ((computerC == 'r' && humanC == 'p') ||
+				(computerC == 'p' && humanC == 's') ||
+				(computerC == 's' && humanC == 'r')) {
 				humanScore++;
 				console.log('Human scores')
 			} else {
 				console.log('Round tie')
 			}
-			console.log(`computer: ${c};	human: ${h}\n\n`)
+			console.log(`computer: ${computerC};	human: ${humanC}\n\n`)
 		}
 
 		const buttons = document.querySelector("buttons");
