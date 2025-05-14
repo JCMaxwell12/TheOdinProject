@@ -1,9 +1,19 @@
 
 function makeGrid(width, height, screenSize) {
+	let squareWidth = screenSize[0]/width - 2;
+	let squareHeight = screenSize[1]/height - 2;
+
+	squareWidth = squareWidth + 'px';
+	console.log(squareWidth)
+	squareHeight = squareHeight + 'px';
+	console.log(squareHeight)
+
 	const container = document.querySelector('.container');
 	const row = document.createElement('div');
 	row.classList.add('row');
 	const square = document.createElement('div');
+	square.style.width = squareWidth;
+	square.style.height = squareHeight;
 	square.classList.add('square');
 
 
