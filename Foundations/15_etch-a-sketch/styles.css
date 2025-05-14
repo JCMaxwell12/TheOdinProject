@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.square{
+	margin: -1px;
+	width: 30px;
+	height: 30px;
+	border-width: 2px;
+	border-style: dotted;
+	border-color: lightgrey;
+}
