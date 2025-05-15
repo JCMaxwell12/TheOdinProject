@@ -16,13 +16,15 @@ function makeGrid(width, height, screenSize) {
 	square.style.height = squareHeight;
 	square.classList.add('square');
 
-
 	for (let squareY = 0; squareY < height; squareY++) {
 		let newRow = row.cloneNode();
 		container.appendChild(newRow);
 	for (let squareX = 0; squareX < width; squareX++) {
 		let newSquare = square.cloneNode();
 		newRow.appendChild(newSquare);
+		newSquare.addEventListener('mouseover', () => {
+			newSquare.style.backgroundColor = 'black';
+		}); 
 	}
 	}
 }
