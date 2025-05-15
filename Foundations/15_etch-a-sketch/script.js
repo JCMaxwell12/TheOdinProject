@@ -4,9 +4,7 @@ function makeGrid(width, height, screenSize) {
 	let squareHeight = screenSize[1]/height - 2;
 
 	squareWidth = squareWidth + 'px';
-	console.log(squareWidth)
 	squareHeight = squareHeight + 'px';
-	console.log(squareHeight)
 
 	const container = document.querySelector('.container');
 	const row = document.createElement('div');
