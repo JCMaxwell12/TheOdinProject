@@ -6,7 +6,6 @@ function makeGrid(width, height, screenSize) {
 	squareWidth = squareWidth + 'px';
 	squareHeight = squareHeight + 'px';
 
-	const container = document.querySelector('.container');
 	const row = document.createElement('div');
 	row.classList.add('row');
 	const square = document.createElement('div');
@@ -27,6 +26,16 @@ function makeGrid(width, height, screenSize) {
 	}
 }
 
+const container = document.querySelector('.container');
 let screenSize = [960, 960];
 
 makeGrid(16, 16, screenSize)
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+	let rows = container.children;
+	while (rows.length>0) {
+		rows[0].remove();
+	}
+	makeGrid(100, 100, screenSize);
+});
