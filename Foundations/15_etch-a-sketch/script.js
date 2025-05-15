@@ -18,7 +18,7 @@ function makeGrid(width, height, screenSize) {
 		container.appendChild(newRow);
 	for (let squareX = 0; squareX < width; squareX++) {
 		let newSquare = square.cloneNode();
-		newSquare.style.backgroundColor = 'black';
+		newSquare.style.backgroundColor = getColor();
 		newSquare.style.opacity = '0';
 		newRow.appendChild(newSquare);
 		newSquare.addEventListener('mouseover', () => {
@@ -26,6 +26,16 @@ function makeGrid(width, height, screenSize) {
 		}); 
 	}
 	}
+}
+
+function getColor() {
+	const alpha = '0123456789ABCDEF';
+	let color = '#';
+	for (let i = 0; i<6; i++) {
+		let digit = Math.floor(Math.random() * alpha.length);
+		color += alpha[digit];
+	}
+	return color;
 }
 
 const container = document.querySelector('.container');
