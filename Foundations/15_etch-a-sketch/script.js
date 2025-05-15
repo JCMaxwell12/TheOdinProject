@@ -37,5 +37,11 @@ button.addEventListener('click', () => {
 	while (rows.length>0) {
 		rows[0].remove();
 	}
-	makeGrid(100, 100, screenSize);
+
+	let size=0
+	while (size<1 || size>100) {
+		size = prompt('How many squares? ', 16);
+	}
+
+	makeGrid(size, size, screenSize);
 });
