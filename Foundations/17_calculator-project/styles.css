@@ -41,6 +41,7 @@ div {
 .screen {
 	padding: 2px 6px;
 	font-size: 3em;
+	height: 1em;
 	text-align: right;
 	background-color: #D7DED7;
 	border-width: 6px;
