@@ -28,7 +28,7 @@ const round = function(num, digits) {
 	if (dotPosn == digits) return round(num);
 	
 	let precision = digits - dotPosn - 1; 	// Get digits after the . to keep
-	let newNum = Number(num.toFixed(precision));
+	let newNum = Number(num).toFixed(precision);
 
 	return newNum;
 }
@@ -41,15 +41,18 @@ const display = function(num, digits) {
 	screen.textContent = val;
 }
 
-const clear = function() {
+const clear = function(calculate) {
 	num1 = 0;
 	num2 = 0;
 	operator = '';
-	display()
+	if (!calculate) {
+		numOnScreen = '';
+		display();
+	}
 }
 
-let num1 = '';
-let num2 = '';
+let num1 = 0;
+let num2 = 0;
 let numOnScreen = '';
 let operator = '';
 let screenSize = 10;
@@ -59,11 +62,18 @@ const numButtons = document.querySelectorAll('.num');
 
 for (const button of numButtons) {
 	button.addEventListener('click', () => {
+		if (isNaN(screen.textContent)) { 	// Clear screen when an 
+			numOnScreen = ''		// operator is on it.
+		}
+		if (button.textContent == '.' &&
+		isNaN(numOnScreen + '.')) {
+			return;
+		}
+
 		numOnScreen += button.textContent;
 		display(numOnScreen, screenSize);
 	})
 }
-
 
 const delBtn = document.querySelector('#ac');
 delBtn.addEventListener('click', () => clear())
@@ -71,3 +81,26 @@ delBtn.addEventListener('click', () => clear())
 const backspaceBtn = document.querySelector('#bs');
 backspaceBtn.addEventListener('click', () => {
 })
+
+const operButtons = document.querySelectorAll('.oper');
+for (const button of operButtons) {
+	button.addEventListener('click', () => {
+		if (button.textContent == '=') {
+			if (operator != '') {
+				num2 = Number(numOnScreen);
+				numOnScreen = operate(operator, num1, num2);
+				clear(true);
+				display(numOnScreen, screenSize);
+				return;
+			} else {
+				return;
+			}
+		}
+		
+		if (operator != '') return;
+		
+		num1 = Number(numOnScreen);
+		operator = button.textContent;
+		display(operator, 1);
+	})
+}
