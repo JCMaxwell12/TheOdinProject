@@ -21,7 +21,9 @@ const round = function(num, digits) {
 	
 	if (numStr.length <= digits) return numStr;
 	
-	if (dotPosn > digits) return 'OL';
+	if (dotPosn > digits ||
+	(dotPosn == -1 &&
+	numStr.length > digits)) return 'OL';
 
 	if (dotPosn == digits) return round(num);
 	
@@ -33,8 +35,8 @@ const round = function(num, digits) {
 
 const display = function(num, digits) {
 	let val = ''
-	if (typeof(num) == 'number') val = round(num, digits);
-	if (typeof(num) == 'string') val = num;
+	if (!isNaN(num)) return screen.textContent = round(num, digits);
+	if (typeof(num) == 'string') return screen.textContent = num;
 	
 	screen.textContent = val;
 }
@@ -47,8 +49,18 @@ const clear = function() {
 }
 
 
-let num1 = 0;
-let num2 = 0;
+let num1 = '';
+let num2 = '';
+let numOnScreen = '';
 let operator = '';
+let screenSize = 10;
 
 const screen = document.querySelector('.screen');
+const numButtons = document.querySelectorAll('.num');
+
+for (const button of numButtons) {
+	button.addEventListener('click', () => {
+		numOnScreen += button.textContent;
+		display(numOnScreen, screenSize);
+	})
+}
