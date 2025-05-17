@@ -80,6 +80,8 @@ delBtn.addEventListener('click', () => clear())
 
 const backspaceBtn = document.querySelector('#bs');
 backspaceBtn.addEventListener('click', () => {
+	numOnScreen = numOnScreen.slice(0, -1); 
+	display(numOnScreen, screenSize);
 })
 
 const operButtons = document.querySelectorAll('.oper');
