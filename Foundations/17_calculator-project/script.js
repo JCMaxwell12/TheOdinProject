@@ -48,7 +48,6 @@ const clear = function() {
 	display()
 }
 
-
 let num1 = '';
 let num2 = '';
 let numOnScreen = '';
@@ -64,3 +63,11 @@ for (const button of numButtons) {
 		display(numOnScreen, screenSize);
 	})
 }
+
+
+const delBtn = document.querySelector('#ac');
+delBtn.addEventListener('click', () => clear())
+
+const backspaceBtn = document.querySelector('#bs');
+backspaceBtn.addEventListener('click', () => {
+})
