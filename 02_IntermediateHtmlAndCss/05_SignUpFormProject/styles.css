@@ -19,3 +19,12 @@ body {
 #formContainer > div {
 	height: 33%;
 }
+
+fieldset {
+	display: flex;
+	gap: 12px;
+}
+
+.formField {
+	flex: 0 1;
+}
