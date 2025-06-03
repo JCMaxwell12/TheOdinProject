@@ -1,17 +1,21 @@
 body {
 	display: flex;
-	margin: 0;
+	margin: 0px;
 }
 
-img {
+#imgContainer {
+	flex: 1 1 auto;
 	height: 100vh;
 	max-width: 40vw;
+	background-image: url("https://plus.unsplash.com/premium_photo-1728613099006-1eb71e78fd21?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
 }
 
 #formContainer {
 	padding: 2em;
+	max-width: 30em;
 }
 
 #formContainer > div {
-	height: 33vh;
+	height: 33%;
 }
