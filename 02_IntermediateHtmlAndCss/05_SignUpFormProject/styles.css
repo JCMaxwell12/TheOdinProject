@@ -26,6 +26,7 @@ body {
 fieldset {
 	display: flex;
 	gap: 12px;
+	border: 0px;
 }
 
 .formField {
