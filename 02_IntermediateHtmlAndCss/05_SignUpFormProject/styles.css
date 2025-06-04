@@ -113,3 +113,7 @@ fieldset {
 	top: 20%;
 	overflow: hidden;
 }
+
+:user-invalid {
+	border-color: #F00;
+}
