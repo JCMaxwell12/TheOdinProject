@@ -78,6 +78,10 @@ fieldset {
 	background: #FAFAFA;
 }
 
+#notice {
+	align-content: flex-end;
+}
+
 #formShadow {
 	height: 6px;
 	width: 100%;
