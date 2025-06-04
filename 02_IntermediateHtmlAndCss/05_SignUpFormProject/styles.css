@@ -43,6 +43,12 @@ a {
 
 button {
 	color: #FFF;
+	background-color: #FA880F;
+	border-radius: 8px;
+	width: 15em;
+	height: 2.8em;
+	border-style: none;
+	box-shadow: 2px 3px 6px #696969;
 }
 
 .card {
