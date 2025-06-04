@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Norse";
+  src:
+    url("https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf");
+	
+}
+
 body {
 	display: flex;
 	margin: 0px;
@@ -86,4 +93,23 @@ fieldset {
 	height: 6px;
 	width: 100%;
 	background: linear-gradient(to bottom, #DCDCDC, #FAFAFA);
+}
+
+#logo {
+	width: 100%;
+	height: 1.5em;
+	font-family: Norse;
+	font-size: 10vh;
+	color: #FFF;
+	background-color: #00000080;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		width: auto;
+		height: 90%;
+	}
+	position: relative;
+	top: 20%;
+	overflow: hidden;
 }
